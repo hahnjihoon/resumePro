@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-_=zpai7oo1$+oid!3u=32mh@otow+j-rn4^6y+-ty=5x1&l7vn
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+# ALLOWED_HOSTS = ['https://yunjung.pythonanywhere.com/']
 
 # Application definition
 
@@ -75,12 +75,36 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'hanjeehun042$resume',  # MySQL 데이터베이스 이름 (PythonAnywhere에서 제공하는 이름과 다를 수 있음)
+#         'USER': 'hanjeehun042',  # MySQL 사용자 이름
+#         'PASSWORD': '1q2w3e4r@@',  # MySQL 비밀번호 (PythonAnywhere에서 제공하는 비밀번호)
+#         'HOST': 'hanjeehun042.mysql.pythonanywhere-services.com',  # MySQL 호스트 주소
+#         'PORT': '3306',
+#     }
+# }  #//온라인세팅
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'yunjung',          # 데이터베이스 이름
+        'USER': 'root',     # MySQL 사용자 이름
+        'PASSWORD': 'root', # MySQL 비밀번호
+        'HOST': 'localhost',        # MySQL 호스트 (로컬일 경우)
+        'PORT': '3306',             # MySQL 포트 (기본값: 3306)
     }
-}
+} # 로컬세팅
 
 
 # Password validation

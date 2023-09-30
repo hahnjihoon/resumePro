@@ -209,6 +209,8 @@
 
                     </div>
                     </form>
+
+
                     <div class="center-container2">
                         <table>
                             <thead>
@@ -218,7 +220,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                        {% for item in data%}
+                                        {% for item in current_page %}
                                     <tr>
                                         <td>{{ item.name }}</td>
                                         <td>{{ item.content }}</td>
@@ -228,8 +230,16 @@
                         </table>
                     </div>
 
-                </main>
+                    <div style="text-align: center;">
+                        <ul style="display: flex; list-style: none; justify-content: center;">
+                            {% for page in paginator.page_range %}
+                                <li style="margin: 3px;"><a style="text-decoration: none; color: blue;" href="?page={{ page }}">{{ page }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
 
+                </main>
+<br><br>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">

@@ -33,4 +33,6 @@ urlpatterns = [
     path('e500', views.e500, name='e500'),
     path('charts', views.charts, name='charts'),
     path('tables', views.tables, name='tables'),
+    path('visitor', views.visitor, name='visitor'),
+    path('get1/', views.get1)
 ]
